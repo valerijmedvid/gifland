@@ -14,6 +14,11 @@ export class TenorClient {
     const { data } = await axios.get(getUrl("search") + `&limit=${limit}&random=${random}&q=${query}`)
     return data
   }
+
+  async featured(limit = 5) {
+    const { data } = await axios.get(getUrl("featured") + `&limit=${limit}`)
+    return data
+  }
 }
 
 function getUrl(endpoint) {

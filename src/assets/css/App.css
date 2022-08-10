@@ -3,15 +3,21 @@
 }
 
 .gifsContainer {
-  width: 350px;
+  width: 900px;
   margin: 0 auto;
   padding: .2em;
   display: inline-block;
-  vertical-align: top
+  vertical-align: top;
+  -webkit-column-count: 3;
+  -webkit-column-gap: 0px;
+  -moz-column-count: 3;
+  -moz-column-gap: 0px;
+  column-count: 3;
+  column-gap: 0px;
 }
 
 .gifsContainer img {
-  width: 100%;
+  width: 290px;
   border-radius: .5em;
   margin: .2em;
 }
