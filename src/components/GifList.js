@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import TenorClient from "../tenorClient"
+import GifItem from "./GifItem"
 
 function GifList() {
   const [gifList, setGifList] = useState([])
@@ -13,7 +14,7 @@ function GifList() {
   return (
     <div className="gifsContainer">
       {gifList.map((gif, key) => (
-        <img key={key} src={gif.media_formats.gif.url} alt="" />
+        <GifItem gif={gif} key={key} />
       ))}
     </div>
   )
