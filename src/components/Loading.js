@@ -1,9 +1,24 @@
+import { useRef, useEffect, useState } from "react"
 import { FaSyncAlt } from "react-icons/fa"
 
-function Loading(props, refs) {
+function Loading({ fetchData, show }) {
+  const myRef = useRef()
+  const [visibility, setVisibility] = useState(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      setVisibility(entries[0].isIntersecting)
+    })
+    observer.observe(myRef.current)
+
+    if (visibility) {
+      fetchData()
+    }
+  }, [visibility]) // eslint-disable-line react-hooks/exhaustive-deps
+
   return (
-    <div>
-      <FaSyncAlt id="loading" className={"loading-icon" + (props.show ? "" : " hideElement")} />
+    <div ref={myRef}>
+      <FaSyncAlt id="loading" className={"loading-icon" + (show ? "" : " hideElement")} />
     </div>
   )
 }
