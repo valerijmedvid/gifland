@@ -11,3 +11,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  text-align: center;
+}
+
+.gifsContainer {
+  width: 500px;
+  margin: 0 auto;
+  padding: .2em;
+}
+
+.gifsContainer img {
+  width: 500px;
+  border-radius: .5em;
+  margin: .2em;
+}
+
+.loading-icon {
+  font-size: 2em;
+  margin: 3em;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.hideElement {
+  visibility: hidden;
+}

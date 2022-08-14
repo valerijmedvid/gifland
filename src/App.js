@@ -1,4 +1,3 @@
-import "./assets/css/App.css"
 import GifList from "./components/GifList"
 
 function App() {

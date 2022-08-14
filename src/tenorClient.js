@@ -6,17 +6,17 @@ const BASE_URL = "https://tenor.googleapis.com/v2"
 
 export class TenorClient {
   async getTrending(limit = 5) {
-    const { data } = await axios.get(getUrl("trending_terms") + `&limit=${limit}`)
+    const { data } = await axios.get(`${getUrl("trending_terms")}&limit=${limit}`)
     return data
   }
 
-  async search(query, limit = 5, random = true) {
-    const { data } = await axios.get(getUrl("search") + `&limit=${limit}&random=${random}&q=${query}`)
+  async search(query, limit = 5, random = true, next = "") {
+    const { data } = await axios.get(`${getUrl("search")}&limit=${limit}&random=${random}&q=${query}&pos=${next}`)
     return data
   }
 
-  async featured(limit = 5) {
-    const { data } = await axios.get(getUrl("featured") + `&limit=${limit}`)
+  async featured(limit = 5, next = "") {
+    const { data } = await axios.get(`${getUrl("featured")}&limit=${limit}&pos=${next}`)
     return data
   }
 }
