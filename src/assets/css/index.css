@@ -26,6 +26,58 @@ body {
   width: 100%;
   border-radius: .5em;
   margin: .1em 0;
+ 
+}
+
+.gifItem {
+  position: relative;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  bottom: .4em;
+  opacity: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.6);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .25s ease;
+  padding: .3em;
+  border-bottom-left-radius: .5em;
+  border-bottom-right-radius: .5em;
+}
+
+.overlay2 {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.6);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: .25s ease;
+  padding: 0.2em 0;
+  border-top-left-radius: .5em;
+  border-top-right-radius: .5em;
+  text-align: right;
+}
+
+.overlay2 span {
+  color: white;
+  opacity: .5;
+  transition: .25s ease;
+  padding-right: .5em;
+}
+
+.overlay2 span:hover {
+  opacity: 1;
+}
+
+.gifItem:hover .overlay, .gifItem:hover .overlay2 {
+  opacity: 1;
 }
 
 
