@@ -12,7 +12,7 @@ function GifList() {
 
   const fetchData = () => {
     setLoading(true)
-    TenorClient.featured(5, gifList.next).then((serchedGifs) => {
+    TenorClient.featured(30, gifList.next).then((serchedGifs) => {
       localStorage.setItem("gifNext", serchedGifs.next)
       dispatch(addGifs([...gifList.gifs, ...serchedGifs.results]))
       dispatch(saveNext(serchedGifs.next))
