@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,25 +11,39 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .App {
   text-align: center;
 }
 
 .gifsContainer {
-  width: 500px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: .2em;
+  column-count: 1;
+  padding: 0;
 }
 
 .gifsContainer img {
-  width: 500px;
+  width: 100%;
   border-radius: .5em;
-  margin: .2em;
+  margin: .1em 0;
+}
+
+
+@media (min-width: 500px) {
+
+  .gifsContainer {
+    column-count: 2;
+  }
+}
+@media (min-width: 700px) {
+  .gifsContainer {
+    column-count: 3;
+  }
+}
+@media (min-width: 1000px) {
+  .gifsContainer {
+    column-count:4;
+  }
 }
 
 .loading-icon {
