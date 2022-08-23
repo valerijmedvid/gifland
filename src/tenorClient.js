@@ -22,7 +22,7 @@ export class TenorClient {
 }
 
 function getUrl(endpoint) {
-  return `${BASE_URL}/${endpoint}?key=${CLIENT_TOKEN}&client_key=${CLIENT_KEY}&media_filter=gif`
+  return `${BASE_URL}/${endpoint}?key=${CLIENT_TOKEN}&client_key=${CLIENT_KEY}&media_filter=gif,tinygif`
 }
 
 export default new TenorClient()

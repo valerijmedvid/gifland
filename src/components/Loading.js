@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react"
 import { FaSyncAlt } from "react-icons/fa"
 
-function Loading({ fetchData, show }) {
+function Loading({ fetchData, loading }) {
   const myRef = useRef()
   const [visibility, setVisibility] = useState(false)
 
@@ -18,7 +18,7 @@ function Loading({ fetchData, show }) {
 
   return (
     <div ref={myRef}>
-      <FaSyncAlt id="loading" className={"loading-icon" + (show ? "" : " hideElement")} />
+      <FaSyncAlt id="loading" className={"loading-icon" + (loading ? "" : " hideElement")} />
     </div>
   )
 }
