@@ -21,7 +21,6 @@ function App() {
   const fetchData = () => {
     setLoading(true)
     TenorClient.featured(30, gifList.next).then((serchedGifs) => {
-      console.log(serchedGifs.results)
       dispatch(addGifs([...gifList.gifs, ...serchedGifs.results]))
       dispatch(saveNext(serchedGifs.next))
       setLoading(false)
