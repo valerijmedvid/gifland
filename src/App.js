@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import GifList from "./components/GifList"
+import GithubCorner from "./components/GithubCorner"
 
 function App() {
   const [emoji, setEmoji] = useState("")
@@ -15,6 +16,7 @@ function App() {
       <h1>
         {emoji} Gifland {emoji2}
       </h1>
+      <GithubCorner />
       <GifList />
     </div>
   )
